@@ -8,14 +8,15 @@ function dragStart(event) {
 }
 
 function drop(event) {
+    console.log(event);
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById(data).style.margin = "1px";
 }
 function isTrueSecondTask() {
-    var firstGapFirstChild = document.getElementById("firstGap").firstChild;
-    var secondGapFirstChild = document.getElementById("secondGap").firstChild;
+    var firstGapFirstChild = document.getElementById("firstGap").children[0];
+    var secondGapFirstChild = document.getElementById("secondGap").children[0];
 
     var isTrueFirst = firstGapFirstChild !== null && firstGapFirstChild.id === "firstOption";
     var isTrueSecond = secondGapFirstChild !== null && secondGapFirstChild.id === "secondOption";
@@ -26,9 +27,9 @@ function isTrueSecondTask() {
         document.getElementById("secondGap").style.borderBottom = "2px dotted red";
 }
 function isTrueFirstTask() {
-    var firstGapFirstChild = document.getElementById("firstLiGap").firstChild;
-    var secondGapFirstChild = document.getElementById("secondLiGap").firstChild;
-    var thirdGapFirstChild = document.getElementById("thirdLiGap").firstChild;
+    var firstGapFirstChild = document.getElementById("firstLiGap").children[0];
+    var secondGapFirstChild = document.getElementById("secondLiGap").children[0];
+    var thirdGapFirstChild = document.getElementById("thirdLiGap").children[0];
 
     var isTrueFirst = firstGapFirstChild !== null && firstGapFirstChild.id === "secondOptionLi";
     var isTrueSecond = secondGapFirstChild !== null && secondGapFirstChild.id === "firstOptionLi";
