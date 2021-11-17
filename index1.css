@@ -1,0 +1,10 @@
+#required{
+    font-size: 12px;
+    border-top: none;
+    border-bottom: 12px;
+}
+#request{
+    font-size: 22px;
+    border-bottom: none;
+    margin-bottom: none;
+}
